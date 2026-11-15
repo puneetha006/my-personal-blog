@@ -16,37 +16,84 @@
         <a href="index.html#blogs">Blogs</a>
         <a href="index.html#projects">Projects</a>
         <a href="index.html#contact">Contact</a>
+        <button id="theme-toggle" class="theme-btn" aria-label="Toggle Dark Mode">🌙</button>
       </nav>
     </div>
   </header>
 
   <main class="section">
-    <div class="container">
+    <div class="container article-container">
       <a href="index.html" class="read-more">← Back to Home</a>
-      <p class="tag" style="margin-top: 20px;">Tech & Case Study • November 2026</p>
-      <h1 style="font-size: 2.2rem; margin: 10px 0 20px;">Designing and Developing a Personal Blogging Website</h1>
       
-      <p style="margin-bottom: 16px;">
-        For my CSE case study at T. John Institute of Technology, I designed and built a responsive 
-        personal blogging and portfolio website from scratch using HTML5 and CSS3.
-      </p>
-      <h3 style="margin: 20px 0 10px;">Key Technical Highlights</h3>
-      <ul class="project-list" style="margin-bottom: 16px;">
-        <li><strong>Semantic HTML5:</strong> Used clean tags like <code>&lt;header&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, and <code>&lt;footer&gt;</code> for accessibility and SEO.</li>
-        <li><strong>Responsive CSS Grid & Flexbox:</strong> Built a layout that adapts smoothly across laptops, tablets, and mobile phones.</li>
-        <li><strong>Lightweight Performance:</strong> Zero heavy frameworks—resulting in instant page loads.</li>
-      </ul>
+      <p class="tag" style="margin-top: 22px;">By Puneetha V M • Tech & Case Study</p>
+      <h1 class="article-title">Designing and Developing a Personal Blogging Website</h1>
+
+      <img 
+        src="https://unsplash.com" 
+        alt="Web development code" 
+        class="article-banner"
+      />
+
       <p>
-        This project taught me how to balance clean visual design with maintainable front-end architecture.
+        For my Computer Science & Engineering case study at <strong>T. John Institute of Technology</strong>, 
+        I designed, built, and deployed this responsive personal blogging and portfolio website from scratch.
       </p>
+
+      <h2>What Went Into Building This Site</h2>
+      <ul class="project-list" style="margin-bottom: 20px;">
+        <li>
+          <strong>Semantic HTML5 Structure:</strong> Organized content cleanly using <code>&lt;header&gt;</code>, 
+          <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, and <code>&lt;footer&gt;</code> tags.
+        </li>
+        <li>
+          <strong>Responsive CSS3 Grid & Flexbox:</strong> Designed a layout that adapts smoothly across 
+          mobile phones, tablets, and laptops.
+        </li>
+        <li>
+          <strong>Interactive Dark Mode:</strong> Added a JavaScript theme switcher that remembers the reader's 
+          light or dark preference using <code>localStorage</code>.
+        </li>
+        <li>
+          <strong>Cloud Hosting via GitHub Pages:</strong> Deployed the entire project online with continuous 
+          updates through GitHub.
+        </li>
+      </ul>
+
+      <p>
+        Building this project showed me how combining simple front-end fundamentals with clean design 
+        can turn personal ideas into a live, accessible web application.
+      </p>
+
+      <div class="closing-box">
+        <p><strong>Built from scratch with HTML5, CSS3, and JavaScript.</strong></p>
+        <p style="margin-top: 6px; color: #2563eb; font-weight: 600;">— Puneetha V M</p>
+      </div>
     </div>
   </main>
 
   <footer>
     <div class="container">
-      <p class="copyright">© 2026 Puneetha V M. Built with HTML & CSS.</p>
+      <p class="copyright">© 2026 Puneetha V M. Built with HTML, CSS & JS.</p>
     </div>
   </footer>
+
+  <!-- Dark Mode Script -->
+  <script>
+    const toggleBtn = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    if (localStorage.getItem('theme') === 'dark') {
+      body.classList.add('dark-mode');
+      toggleBtn.textContent = '☀️';
+    }
+
+    toggleBtn.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      const isDark = body.classList.contains('dark-mode');
+      toggleBtn.textContent = isDark ? '☀️' : '🌙';
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    });
+  </script>
 
 </body>
 </html>
