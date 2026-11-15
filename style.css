@@ -1,4 +1,69 @@
-/* Creative Hero Grid & Images */
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #1f2937;
+  background-color: #ffffff;
+  line-height: 1.6;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.container {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header & Navigation */
+header {
+  border-bottom: 1px solid #e5e7eb;
+  padding: 18px 0;
+  position: sticky;
+  top: 0;
+  background: rgba(255, 255, 255, 0.95);
+  z-index: 100;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111827;
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav a {
+  margin-left: 18px;
+  text-decoration: none;
+  color: #4b5563;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+nav a:hover {
+  color: #2563eb;
+}
+
+/* Hero Section */
+.hero {
+  padding: 60px 0 45px;
+}
+
 .hero-grid {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
@@ -17,6 +82,25 @@
   margin-bottom: 12px;
 }
 
+.hero h1 {
+  font-size: 2.4rem;
+  color: #111827;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: #2563eb;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.bio {
+  color: #4b5563;
+  font-size: 1.02rem;
+  margin-bottom: 22px;
+}
+
 .hero-img {
   width: 100%;
   border-radius: 14px;
@@ -24,7 +108,49 @@
   object-fit: cover;
 }
 
-/* Blog Card with Thumbnail */
+.btn {
+  display: inline-block;
+  background-color: #2563eb;
+  color: #ffffff;
+  padding: 10px 22px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.btn:hover {
+  background-color: #1d4ed8;
+}
+
+/* Sections & Blog Cards */
+.section {
+  padding: 48px 0;
+}
+
+.alt-bg {
+  background-color: #f9fafb;
+  border-top: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 22px;
+  color: #111827;
+}
+
+.card {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 22px;
+  margin-bottom: 20px;
+  background: #ffffff;
+}
+
+.card:hover {
+  border-color: #2563eb;
+}
+
 .card-with-img {
   display: grid;
   grid-template-columns: 180px 1fr;
@@ -39,7 +165,39 @@
   border-radius: 8px;
 }
 
-/* Skill Badges */
+.tag {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #6b7280;
+  font-weight: 600;
+}
+
+.card h3 {
+  font-size: 1.25rem;
+  margin: 6px 0 10px;
+  color: #111827;
+}
+
+.card p {
+  color: #4b5563;
+  margin-bottom: 14px;
+}
+
+.read-more {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* About & Projects Grid */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+
 .skills-wrap {
   display: flex;
   flex-wrap: wrap;
@@ -56,15 +214,25 @@
   border-radius: 6px;
 }
 
+.project-list {
+  padding-left: 18px;
+  color: #4b5563;
+}
+
+.project-list li {
+  margin-bottom: 10px;
+}
+
 /* Full Blog Article Styling */
 .article-container {
   max-width: 720px;
 }
 
 .article-title {
-  font-size: 2.2rem;
+  font-size: 2.1rem;
   margin: 10px 0 22px;
   line-height: 1.25;
+  color: #111827;
 }
 
 .article-banner {
@@ -117,6 +285,23 @@
   font-size: 1rem;
 }
 
+/* Footer */
+footer {
+  padding: 35px 0;
+  text-align: center;
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.copyright {
+  margin-top: 8px;
+}
+
 /* Dark Mode Theme */
 body.dark-mode {
   background-color: #111827;
@@ -166,13 +351,21 @@ body.dark-mode .theme-btn {
   border-color: #374151;
 }
 
-/* Responsive Adjustments */
+/* Mobile Responsive */
 @media (max-width: 700px) {
   .hero-grid,
-  .card-with-img {
+  .card-with-img,
+  .grid-2 {
     grid-template-columns: 1fr;
   }
   .card-thumb {
     height: 180px;
+  }
+  .hero h1 {
+    font-size: 2rem;
+  }
+  nav a {
+    margin-left: 12px;
+    font-size: 0.88rem;
   }
 }
