@@ -17,20 +17,31 @@
         <a href="#blogs">Blogs</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
+        <button id="theme-toggle" class="theme-btn" aria-label="Toggle Dark Mode">🌙</button>
       </nav>
     </div>
   </header>
 
-  <!-- Hero / Intro Section -->
+  <!-- Hero / Intro Section with Creative Visual -->
   <section class="hero">
-    <div class="container">
-      <h1>Hi, I’m Puneetha 👋</h1>
-      <p class="subtitle">Computer Science & Engineering Student | Tech Enthusiast | Writer</p>
-      <p class="bio">
-        Welcome to my corner of the internet. Here, I share my journey through engineering, 
-        personal reflections, coding projects, and lessons I learn along the way.
-      </p>
-      <a href="#blogs" class="btn">Read My Blogs</a>
+    <div class="container hero-grid">
+      <div>
+        <span class="pill">B.E. Computer Science & Engineering</span>
+        <h1>Hi, I’m Puneetha 👋</h1>
+        <p class="subtitle">Learning • Exploring • Growing</p>
+        <p class="bio">
+          Every journey begins with a dream. Welcome to my digital notebook where I share my 
+          experiences in tech, coding in C, Java & HTML, and building real-world projects.
+        </p>
+        <a href="#blogs" class="btn">Read My Journey</a>
+      </div>
+      <div class="hero-art">
+        <img 
+          src="https://unsplash.com" 
+          alt="Laptop coding workspace aesthetic" 
+          class="hero-img"
+        />
+      </div>
     </div>
   </section>
 
@@ -39,24 +50,38 @@
     <div class="container">
       <h2>Latest Blog Posts</h2>
       
-      <article class="card">
-        <span class="tag">Personal • Nov 2026</span>
-        <h3>Why I Started Writing My Own Blog</h3>
-        <p>
-          Documenting my college life, ideas, and growth helps me think clearly and connect with 
-          others. Here is what inspired me to build this platform from scratch...
-        </p>
-        <a href="post1.html" class="read-more">Read More →</a>
+      <article class="card card-with-img">
+        <img 
+          src="https://unsplash.com" 
+          alt="Notebook and coffee" 
+          class="card-thumb"
+        />
+        <div>
+          <span class="tag">Personal Journey • Nov 2026</span>
+          <h3>My Journey of Learning, Exploring and Growing</h3>
+          <p>
+            Every journey begins with a dream. Discover how my path in Computer Science at T. John 
+            Institute of Technology is shaping my skills, mindset, and future aspirations...
+          </p>
+          <a href="post1.html" class="read-more">Read Full Story →</a>
+        </div>
       </article>
 
-      <article class="card">
-        <span class="tag">Tech & Case Study • Nov 2026</span>
-        <h3>Designing and Developing a Personal Blogging Website</h3>
-        <p>
-          A behind-the-scenes look at how I structured and styled this responsive web page using 
-          semantic HTML5 and modern CSS3 for my CSE case study...
-        </p>
-        <a href="post2.html" class="read-more">Read More →</a>
+      <article class="card card-with-img">
+        <img 
+          src="https://unsplash.com" 
+          alt="Code on screen" 
+          class="card-thumb"
+        />
+        <div>
+          <span class="tag">Tech & Case Study • Nov 2026</span>
+          <h3>Designing and Developing a Personal Blogging Website</h3>
+          <p>
+            A behind-the-scenes look at how I structured and styled this responsive web page using 
+            semantic HTML5, CSS3, and Dark Mode JavaScript...
+          </p>
+          <a href="post2.html" class="read-more">Read More →</a>
+        </div>
       </article>
     </div>
   </section>
@@ -66,17 +91,35 @@
     <div class="container grid-2">
       <div>
         <h2>About Me</h2>
-        <p>
-          I am a Computer Science & Engineering student at T. John Institute of Technology, Bengaluru. 
-          Outside of coding and coursework, I enjoy writing, exploring web technologies, and building 
-          clean, user-friendly digital experiences.
+        <p style="margin-bottom: 14px;">
+          I am currently pursuing my Bachelor of Engineering in Computer Science and Engineering at 
+          <strong>T. John Institute of Technology</strong>, Bengaluru.
         </p>
+        <p>
+          I believe education goes beyond textbooks—it is about practical knowledge, embracing 
+          mistakes as lessons, and growing one step at a time.
+        </p>
+        <div class="skills-wrap">
+          <span class="skill-badge">C Programming</span>
+          <span class="skill-badge">Java</span>
+          <span class="skill-badge">HTML5 & CSS3</span>
+          <span class="skill-badge">Web Development</span>
+        </div>
       </div>
       <div id="projects">
-        <h2>Featured Work</h2>
+        <h2>Featured Projects</h2>
         <ul class="project-list">
-          <li><strong>Personal Blogging Platform:</strong> Built with HTML5, CSS3, and GitHub Pages.</li>
-          <li><strong>The Quiet Canvas:</strong> A creative web design exploration project.</li>
+          <li>
+            <strong>Multimodal RAG for Financial Data:</strong> College mini project exploring AI retrieval 
+            and practical financial data analysis.
+          </li>
+          <li>
+            <strong>Personal Blogging Website:</strong> Responsive personal blog with Dark Mode built 
+            with HTML5, CSS3, JS, and GitHub Pages.
+          </li>
+          <li>
+            <strong>The Quiet Canvas:</strong> A creative front-end web design project.
+          </li>
         </ul>
       </div>
     </div>
@@ -85,10 +128,33 @@
   <!-- Footer / Contact -->
   <footer id="contact">
     <div class="container">
-      <p>Let’s connect: <a href="mailto:your-email@example.com">Email</a> • <a href="#">GitHub</a> • <a href="#">LinkedIn</a></p>
-      <p class="copyright">© 2026 Puneetha V M. Built with HTML & CSS.</p>
+      <p>
+        Let’s connect: 
+        <a href="mailto:your-email@example.com">Email</a> • 
+        <a href="https://github.com" target="_blank">GitHub</a> • 
+        <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+      </p>
+      <p class="copyright">© 2026 Puneetha V M. One step at a time. One dream at a time.</p>
     </div>
   </footer>
+
+  <!-- Dark Mode Script -->
+  <script>
+    const toggleBtn = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    if (localStorage.getItem('theme') === 'dark') {
+      body.classList.add('dark-mode');
+      toggleBtn.textContent = '☀️';
+    }
+
+    toggleBtn.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      const isDark = body.classList.contains('dark-mode');
+      toggleBtn.textContent = isDark ? '☀️' : '🌙';
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    });
+  </script>
 
 </body>
 </html>

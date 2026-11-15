@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Why I Started Writing My Own Blog | Puneetha V M</title>
+  <title>My Journey of Learning, Exploring and Growing | Puneetha V M</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -16,38 +16,121 @@
         <a href="index.html#blogs">Blogs</a>
         <a href="index.html#projects">Projects</a>
         <a href="index.html#contact">Contact</a>
+        <button id="theme-toggle" class="theme-btn" aria-label="Toggle Dark Mode">🌙</button>
       </nav>
     </div>
   </header>
 
   <main class="section">
-    <div class="container">
+    <div class="container article-container">
       <a href="index.html" class="read-more">← Back to Home</a>
-      <p class="tag" style="margin-top: 20px;">Personal • November 2026</p>
-      <h1 style="font-size: 2.2rem; margin: 10px 0 20px;">Why I Started Writing My Own Blog</h1>
       
-      <p style="margin-bottom: 16px;">
-        As a Computer Science & Engineering student, most of my days are spent learning algorithms, 
-        writing code, and preparing for exams. While technical skills are essential, I wanted a 
-        personal space where I could slow down, reflect, and share my own voice.
+      <p class="tag" style="margin-top: 22px;">By Puneetha V M • Personal Journey</p>
+      <h1 class="article-title">My Journey of Learning, Exploring and Growing</h1>
+
+      <img 
+        src="https://unsplash.com" 
+        alt="Writing and learning journey" 
+        class="article-banner"
+      />
+
+      <blockquote class="highlight-quote">
+        “Every journey begins with a dream.”
+      </blockquote>
+
+      <p>
+        Life is a continuous journey of learning, discovering new opportunities and developing ourselves. 
+        Everyone has their own ambitions, challenges and dreams. What matters most is having the 
+        determination to move forward and make those dreams a reality.
       </p>
-      <p style="margin-bottom: 16px;">
-        Writing helps turn scattered thoughts into clear ideas. Whether it is a lesson learned from 
-        a tough project, a book that changed my perspective, or thoughts on college life in Bengaluru, 
-        this blog is my digital notebook.
+
+      <p>
+        I am <strong>Puneetha V M</strong>, currently pursuing my Bachelor of Engineering in Computer 
+        Science and Engineering at <strong>T. John Institute of Technology</strong>.
+      </p>
+
+      <p>
+        As a student, I believe that education is not limited to textbooks, examinations or academic 
+        achievements. It is also about gaining practical knowledge, exploring new interests and 
+        preparing ourselves for the opportunities ahead.
+      </p>
+
+      <h2>Exploring Technology</h2>
+      <p>
+        My interest in technology has encouraged me to explore programming and website development. 
+        I am currently learning programming languages such as <strong>C</strong> and <strong>Java</strong>, 
+        along with <strong>HTML</strong>.
       </p>
       <p>
-        Instead of using a pre-made blogging site, I decided to code this platform myself—combining 
-        my love for writing with my passion for web development.
+        I enjoy discovering how technology works and how creative ideas can be transformed into useful applications.
       </p>
+      <p>
+        I am also working on a college mini project titled <strong>Multimodal RAG for Financial Data</strong>, 
+        which gives me an opportunity to explore new concepts and gain practical experience.
+      </p>
+
+      <h2>Learning Beyond Limitations</h2>
+      <p>
+        I believe that nobody needs to be perfect to begin something new. Every skill requires time, 
+        practice and patience.
+      </p>
+      <p>
+        There will always be something new to learn, challenges to overcome and opportunities to improve. 
+        Instead of being afraid of mistakes, I want to consider them valuable learning experiences.
+      </p>
+
+      <h2>My Future Aspirations</h2>
+      <p>
+        One of my biggest goals is to establish a successful career, become financially independent and 
+        secure a good professional opportunity.
+      </p>
+      <p>
+        I want to continuously improve my technical knowledge, develop new skills and gain experiences 
+        that contribute to my professional growth. I understand that success requires consistent effort, 
+        dedication and the willingness to adapt to changes.
+      </p>
+
+      <h2>A Journey Still in Progress</h2>
+      <p>
+        This blog is more than just an introduction. It represents the beginning of my journey, where I 
+        can document my learning experiences, share my thoughts, explore technology and celebrate my progress.
+      </p>
+      <p>
+        I may still have many things to learn, but I am excited about the opportunities waiting ahead. 
+        I am not here to show that I know everything. I am here to share what I learn, embrace new 
+        experiences and grow with every opportunity.
+      </p>
+
+      <div class="closing-box">
+        <p><strong>One step at a time. One lesson at a time. One dream at a time.</strong></p>
+        <p style="margin-top: 6px; color: #2563eb; font-weight: 600;">— Puneetha V M</p>
+      </div>
     </div>
   </main>
 
   <footer>
     <div class="container">
-      <p class="copyright">© 2026 Puneetha V M. Built with HTML & CSS.</p>
+      <p class="copyright">© 2026 Puneetha V M. Built with HTML, CSS & JS.</p>
     </div>
   </footer>
+
+  <!-- Dark Mode Script -->
+  <script>
+    const toggleBtn = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    if (localStorage.getItem('theme') === 'dark') {
+      body.classList.add('dark-mode');
+      toggleBtn.textContent = '☀️';
+    }
+
+    toggleBtn.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      const isDark = body.classList.contains('dark-mode');
+      toggleBtn.textContent = isDark ? '☀️' : '🌙';
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    });
+  </script>
 
 </body>
 </html>
