@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Why I Started Writing My Own Blog | Puneetha V M</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <div class="container nav">
+      <a href="index.html" class="logo">Puneetha V M</a>
+      <nav>
+        <a href="index.html#about">About</a>
+        <a href="index.html#blogs">Blogs</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <a href="index.html" class="read-more">← Back to Home</a>
+      <p class="tag" style="margin-top: 20px;">Personal • November 2026</p>
+      <h1 style="font-size: 2.2rem; margin: 10px 0 20px;">Why I Started Writing My Own Blog</h1>
+      
+      <p style="margin-bottom: 16px;">
+        As a Computer Science & Engineering student, most of my days are spent learning algorithms, 
+        writing code, and preparing for exams. While technical skills are essential, I wanted a 
+        personal space where I could slow down, reflect, and share my own voice.
+      </p>
+      <p style="margin-bottom: 16px;">
+        Writing helps turn scattered thoughts into clear ideas. Whether it is a lesson learned from 
+        a tough project, a book that changed my perspective, or thoughts on college life in Bengaluru, 
+        this blog is my digital notebook.
+      </p>
+      <p>
+        Instead of using a pre-made blogging site, I decided to code this platform myself—combining 
+        my love for writing with my passion for web development.
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p class="copyright">© 2026 Puneetha V M. Built with HTML & CSS.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
